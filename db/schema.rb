@@ -13,10 +13,11 @@
 ActiveRecord::Schema[8.0].define(version: 2025_03_14_225840) do
   create_table "api_keys", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "name"
-    t.string "token"
+    t.string "name", null: false
+    t.string "token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_api_keys_on_token", unique: true
     t.index ["user_id"], name: "index_api_keys_on_user_id"
   end
 
