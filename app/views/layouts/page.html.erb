@@ -1,4 +1,4 @@
-<%= render_layout "application" do %>
+<%= render_layout "body" do %>
   <header>
     <hgroup>
       <h1><%= current_page.data.title %></h1>
@@ -6,11 +6,7 @@
         <h2><%= subtitle %></h2>
       <% end %>
     </hgroup>
-    <!-- <nav>
-      <ul>
-        <li><a href="/">Docs</a></li>
-      </ul>
-    </nav> -->
+    <%= render "layouts/nav" %>
   </header>
   <main>
     <%= yield %>

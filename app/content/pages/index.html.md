@@ -1,6 +1,6 @@
 ---
-title: Quickest Start
-subtitle: A demonstration of Terminalwire improving onboarding for a SaaS
+title: Quickest Start Demo
+subtitle: A demo of Terminalwire improving onboarding for a SaaS
 layout: page
 ---
 

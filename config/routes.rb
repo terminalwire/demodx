@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+
   sitepress_pages
   sitepress_root
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
