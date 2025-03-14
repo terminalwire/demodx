@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :api_keys
   devise_for :users
 
   sitepress_pages

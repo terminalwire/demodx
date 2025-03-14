@@ -1,0 +1,12 @@
+<% content_for :title, "Editing api key" %>
+
+<h1>Editing api key</h1>
+
+<%= render "form", api_key: @api_key %>
+
+<br>
+
+<div>
+  <%= link_to "Show this api key", @api_key %> |
+  <%= link_to "Back to api keys", api_keys_path %>
+</div>
