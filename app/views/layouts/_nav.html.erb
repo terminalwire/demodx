@@ -3,10 +3,10 @@
     <li><a href="/">Docs</a></li>
     <% if signed_in? %>
       <li>
-        <a href="<%= destroy_user_session_path %>" data-turbo-method="delete">Sign Out</a>
+        <a href="<%= api_keys_path %>">API Keys</a>
       </li>
       <li>
-        <a href="<%= api_keys_path %>">API Keys</a>
+        <a href="<%= destroy_user_session_path %>" data-turbo-method="delete">Sign Out</a>
       </li>
     <% else %>
       <li>
