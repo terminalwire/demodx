@@ -10,9 +10,9 @@ class ApiKeysTest < ApplicationSystemTestCase
     assert_selector "h1", text: "API keys"
   end
 
-  test "should create api key" do
+  test "should create API key" do
     visit api_keys_url
-    click_on "New api key"
+    click_on "New API key"
 
     fill_in "Name", with: @api_key.name
     fill_in "Token", with: @api_key.token
@@ -25,7 +25,7 @@ class ApiKeysTest < ApplicationSystemTestCase
 
   test "should update Api key" do
     visit api_key_url(@api_key)
-    click_on "Edit this api key", match: :first
+    click_on "Edit this API key", match: :first
 
     fill_in "Name", with: @api_key.name
     fill_in "Token", with: @api_key.token
@@ -38,7 +38,7 @@ class ApiKeysTest < ApplicationSystemTestCase
 
   test "should destroy Api key" do
     visit api_key_url(@api_key)
-    click_on "Destroy this api key", match: :first
+    click_on "Destroy this API key", match: :first
 
     assert_text "Api key was successfully destroyed"
   end
