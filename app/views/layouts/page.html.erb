@@ -1,0 +1,23 @@
+<%= render_layout "application" do %>
+  <header>
+    <hgroup>
+      <h1><%= current_page.data.title %></h1>
+      <% if subtitle = current_page.data.subtitle %>
+        <h2><%= subtitle %></h2>
+      <% end %>
+    </hgroup>
+    <!-- <nav>
+      <ul>
+        <li><a href="/">Docs</a></li>
+      </ul>
+    </nav> -->
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <small>
+      This is a demo that shows how a SaaS can streamline their sign-up and setup process from multiple steps and pages of documentation into two steps with Teminalwire. <a href="https://github.com/terminalwire/demodx">Source Code</a> for this demo may be found on <a href="https://github.com/terminalwire/demodx">Github</a>.
+    </small>
+  </footer>
+<% end %>
