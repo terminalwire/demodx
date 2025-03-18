@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  match "/terminal",
+    to: Terminalwire::Rails::Thor.new(MainTerminal),
+    via: [:get, :connect]
   resources :api_keys
   devise_for :users
+
+  resources :terminal_authorizations, only: [:show, :update]
 
   sitepress_pages
   sitepress_root

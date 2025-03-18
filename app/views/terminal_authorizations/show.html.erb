@@ -1,0 +1,8 @@
+<h1>Authorize Command-Line App</h1>
+
+<p>The command line has requested access.</p>
+
+<%= form_tag url_for, method: :patch, local: true do |f| %>
+  <%= submit_tag "Approve" %>
+  <%= submit_tag "Deny" %>
+<% end %>
