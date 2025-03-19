@@ -74,7 +74,7 @@ gem "litestream", "~> 0.12.0"
 
 gem "aws-sdk-s3", "~> 1.182", :require => false
 
-gem "terminalwire-rails", "~> 0.3.4", path: "~/Projects/terminalwire/ruby/gem"
+gem "terminalwire-rails", "~> 0.3.5.alpha"
 
 gem "terminalwire", group: :development
 

@@ -14,7 +14,7 @@ console_command = '/rails/bin/rails console'
   PORT = '8080'
 
 [processes]
-  app = './bin/rake litestream:run ./bin/rails server'
+  app = "./bin/rake litestream:run ./bin/rails server"
 
 [[mounts]]
   source = 'data'
