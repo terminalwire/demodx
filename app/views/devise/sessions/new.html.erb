@@ -1,0 +1,29 @@
+<% content_for :title, "Log in" %>
+<% content_for :subtitle do %>
+  <%= link_to "Sign up for an account", new_user_registration_path %> if you don't have one or log in below.
+<% end %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <fieldset>
+    <%= f.label :email do |l| %>
+      <%= l.to_s %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <% end %>
+
+    <%= f.label :password do |l| %>
+      <%= l.to_s %>
+      <%= f.password_field :password, autofocus: true, autocomplete: "current-password" %>
+    <% end %>
+
+    <% if devise_mapping.rememberable? %>
+      <%= f.label :remember_me do |l| %>
+        <%= l.to_s %>
+        <%= f.check_box :remember_me %>
+      <% end %>
+    <% end %>
+  </fieldset>
+
+  <%= f.submit "Log in" %>
+<% end %>
+
+<%= render "devise/shared/links" %>
