@@ -1,2 +1,0 @@
-#!/usr/bin/env terminalwire-exec
-url: "ws://localhost:3000/terminal"

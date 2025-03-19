@@ -4,7 +4,7 @@ class ApplicationTerminal < Thor
   include Terminalwire::Thor
 
   # The name of your binary. Thor uses this for its help output.
-  def self.basename = "my-app"
+  def self.basename = "demodx"
 
   private
 

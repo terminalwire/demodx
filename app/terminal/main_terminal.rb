@@ -8,15 +8,17 @@ class MainTerminal < ApplicationTerminal
   desc "login", "Login to your account"
   def login
     Terminalwire::Rails::Channel.new do |channel|
-      url = root_url(channel: channel.id)
+      url = terminal_authorization_url(channel)
       puts "Launching #{url}"
-      browser.launch terminal_authorization_url(channel.id)
+      browser.launch url
 
-      # if data = JSON.parse channel.read
-      #   puts "Successfully logged in as #{data["email"]}."
-      # else
-      #   fail "Login failed."
-      # end
+      case JSON.parse(channel.read.data, symbolize_names: true)
+      in status: "approved", user_id:
+        self.current_user = User.find(user_id)
+        puts "Logged in in as #{current_user.email}."
+      else
+        fail "Login failed."
+      end
     end
   end
 
