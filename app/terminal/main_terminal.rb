@@ -7,4 +7,7 @@ class MainTerminal < ApplicationTerminal
 
   desc "auth", "Login to Terminalwire"
   subcommand "auth", AuthorizationCommands
+
+  desc "keys", "Manage API Keys"
+  subcommand "keys", ApiKeyCommands
 end

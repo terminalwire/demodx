@@ -11,4 +11,8 @@ class ApiKey < ApplicationRecord
   def assign_random_token
     self.token = SecureRandom.hex
   end
+
+  def self.generate_name
+    "#{Time.now.to_fs(:long)} API Key"
+  end
 end

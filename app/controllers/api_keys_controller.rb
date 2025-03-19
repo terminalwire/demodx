@@ -16,7 +16,7 @@ class ApiKeysController < ApplicationController
 
   # GET /api_keys/new
   def new
-    @api_key = current_user.api_keys.build(name: "#{Time.now.to_fs(:long)} API Key")
+    @api_key = current_user.api_keys.build(name: ApiKey.generate_name)
   end
 
   # GET /api_keys/1/edit
