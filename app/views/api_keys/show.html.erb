@@ -3,8 +3,6 @@
 <%= render @api_key %>
 
 <div>
-  <%= link_to "Edit this API key", edit_api_key_path(@api_key) %> |
-  <%= link_to "Back to API keys", api_keys_path %>
-
-  <%= button_to "Destroy this API key", @api_key, method: :delete %>
+  <%= link_to "Edit this API key", edit_api_key_path(@api_key), role: "button" %>
+  <%= link_to "Destroy this API key", @api_key, "data-turbo-method": :delete, role: "button" %>
 </div>

@@ -1,16 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "API keys" %>
+<p>Run <code><%= command "keys" %></code> from the command line to view keys.</p>
 
-<h1>API keys</h1>
+<table id="api_keys">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @api_keys.each do |it| %>
+      <tr>
+        <th><%= link_to it.name, it %></th>
+        <td><%= it.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<div id="api_keys">
-  <% @api_keys.each do |api_key| %>
-    <%= render api_key %>
-    <p>
-      <%= link_to "Show this API key", api_key %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New API key", new_api_key_path %>
+<%= link_to "New API key", new_api_key_path, role: "button" %>

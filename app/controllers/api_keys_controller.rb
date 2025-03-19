@@ -1,7 +1,9 @@
 class ApiKeysController < ApplicationController
   before_action :authenticate_user!
-
   before_action :set_api_key, only: %i[ show edit update destroy ]
+  before_action do
+    @page_title = "API keys"
+  end
 
   # GET /api_keys or /api_keys.json
   def index
@@ -14,7 +16,7 @@ class ApiKeysController < ApplicationController
 
   # GET /api_keys/new
   def new
-    @api_key = current_user.api_keys.build(name: "API Key created at #{Time.now.to_fs(:long)}")
+    @api_key = current_user.api_keys.build(name: "#{Time.now.to_fs(:long)} API Key")
   end
 
   # GET /api_keys/1/edit
