@@ -1,8 +1,8 @@
 
 class MainTerminal < ApplicationTerminal
-  desc "hello NAME", "say hello to NAME"
-  def hello(name)
-    puts "Hello #{name}"
+  desc "open", "Open website"
+  def open
+    browser.launch root_url
   end
 
   desc "auth", "Login to Terminalwire"
