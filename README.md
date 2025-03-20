@@ -1,6 +1,6 @@
 # README
 
-This is a demo Rails app that shows how a SaaS can improve their developer experience and streamline onboarding by eliminating the "point click point click ..." instructions of getting an API key to "Install this CLI and run `demodx apitoken create`".
+This is a demo Rails app that shows how a SaaS can improve their developer experience and streamline onboarding by eliminating the "point click point click ..." instructions of getting an API key to "Install this CLI and run `demodx apitoken create`."
 
 ## Live Demo
 
@@ -14,13 +14,13 @@ The source code for this project is available for study in this repo. You may cl
 $ git clone git@github.com:terminalwire/demodx.git
 ```
 
-Then install the dependencies
+Then install the dependencies:
 
 ```bash
 $ bundle install
 ```
 
-And run the server
+And run the server:
 
 ```bash
 $ bin/rails s
@@ -35,11 +35,12 @@ You may run the `bin/demodx` CLI app against the development server by running:
 ```bash
 $ bin/demodx
 ```
-## Notable source code
+
+## Notable Source Code
 
 The source code for this application will teach you [Thor](http://whatisthor.com/), [Terminalwire](https://terminalwire.com), and how to build a better onboarding developer experience.
 
-### Terminal app source code
+### Terminal App Source Code
 
 Terminalwire streams the command-line from your Rails server to a thin-client. The source for the command-line app is in the [./app/terminal](https://github.com/terminalwire/demodx/tree/main/app/terminal) folder.
 
@@ -49,7 +50,7 @@ The [./app/terminal/main_terminal.rb](./app/terminal/main_terminal.rb) file is t
 
 ### Application Terminal
 
-The [./app/terminal/application_terminal.rb](https://github.com/terminalwire/demodx/blob/main/app/terminal/application_terminal.rb) file has baseline code that's used by all terminal apps including methods that set the current user, authentication, etc. It's analagous to the `ApplicationController` in Rails.
+The [./app/terminal/application_terminal.rb](https://github.com/terminalwire/demodx/blob/main/app/terminal/application_terminal.rb) file has baseline code that's used by all terminal apps, including methods that set the current user, authentication, etc. It's analogous to the `ApplicationController` in Rails.
 
 You'll notice this file extends the `Thor` class and includes the `Terminalwire::Terminal` module. This is what enables streaming for a Thor command-line app from the server to the client.
 
@@ -57,7 +58,7 @@ You'll notice this file extends the `Thor` class and includes the `Terminalwire:
 
 The `MainTerminal` is mounted in the [./config/routes.rb](https://github.com/terminalwire/demodx/blob/main/config/routes.rb#L2-L4) file. The URL of this route is the endpoint for Terminalwire clients and licenses.
 
-## Terminalwire thin-client
+## Terminalwire Thin-Client
 
 The command-line app that users install on their workstations looks like [./bin/demodx](https://github.com/terminalwire/demodx/blob/main/bin/demodx). You'll notice it has the same URL that's configured in the Rails routes file, which points to your local development server.
 
