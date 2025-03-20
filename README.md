@@ -4,7 +4,7 @@ This is a demo Rails app that shows how a SaaS can improve their developer exper
 
 ## Live Demo
 
-A live demo for this app is available at [https://demodx.fly.dev](https://demodx.fly.dev).
+A live demo for this app is available at [https://demodx.terminalwire.com](https://demodx.terminalwire.com).
 
 ## Getting Started
 
