@@ -20,7 +20,7 @@ $ curl -LSs https://demodx.terminalwire.sh | bash
 After installed `demodx`, you can get your API keys by running:
 
 ```sh
-$ demodx apikey create
+$ demodx key create
 ```
 
 ### That's it!
