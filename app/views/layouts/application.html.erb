@@ -1,13 +1,12 @@
 <%= render_layout "body" do %>
-  <header>
+  <main>
     <hgroup>
       <h1><%= content_for(:title) || @page_title %></h1>
       <% if subtitle = content_for(:subtitle) || @page_subtitle %>
         <h2><%= subtitle %></h2>
       <% end %>
     </hgroup>
-    <%= render "layouts/nav" %>
-  </header>
+  </main>
   <main>
     <%= yield %>
   </main>
